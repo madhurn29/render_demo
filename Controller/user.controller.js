@@ -4,6 +4,7 @@ var jwt = require("jsonwebtoken");
 const signupController = async (req, res) => {
   const { email, pass } = req.body;
   const saltRounds = 4;
+  console.log("Seeding")
   try {
     const existingUser = await UserModel.find({ email: email });
 
